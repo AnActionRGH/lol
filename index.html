@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hyperion: A stupid, shitty, test website lmao>
+    <title>Hyperion</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+        header {
+            background: linear-gradient(135deg, #1f1f1f, #4f4f4f);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: auto;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        .interactive-section {
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Hyperion</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <section id="about">
+                <h2>About Me</h2>
+                <p>Hello! This is Hyperion, a terrible and non-interactive website hosted on something!! Feel free to explore and FUCK YOU it as you wish.</p>
+            </section>
+
+            <section id="projects">
+                <h2>My Projects</h2>
+                <p>Here you can showcase your projects or share your thoughts. Check out the interactive feature below!</p>
+
+                <div class="interactive-section">
+                    <button id="interactiveButton">Click Me!</button>
+                    <p id="message" style="margin-top: 1rem;"></p>
+                </div>
+            </section>
+
+            <section id="contact">
+                <h2>Contact</h2>
+                <p>If you'd like to get in touch, you can reach me at <a href="mailto:example@example.com">example@example.com</a>.</p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Hyperion</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const button = document.getElementById('interactiveButton');
+            const message = document.getElementById('message');
+
+            button.addEventListener('click', () => {
+                message.textContent = 'You clicked the button!';
+                message.style.color = '#007bff';
+            });
+        });
+    </script>
+</body>
+</html>
